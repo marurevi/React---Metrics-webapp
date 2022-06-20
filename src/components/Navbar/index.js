@@ -1,15 +1,17 @@
 import React from 'react';
-import { Nav, NavLink, Bars, NavMenu } from './NavbarStyle';
+import {
+  Nav, NavLink, Bars, NavMenu,
+} from './NavbarStyle';
 
-const Navbar = () => {
+function Navbar() {
   return (
     <div>
       <Nav>
-        <NavLink to="/">
-          <h1>Logo</h1>
-        </NavLink>
         <Bars />
         <NavMenu>
+          <NavLink to="/">
+            Home
+          </NavLink>
           <NavLink to="/details" activeStyle>
             Details
           </NavLink>
@@ -17,6 +19,7 @@ const Navbar = () => {
             Contact us
           </NavLink>
         </NavMenu>
+
       </Nav>
     </div>
   );
