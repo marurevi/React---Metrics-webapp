@@ -16,11 +16,11 @@ function Navbar() {
                 <NavLink to="/" onClick={() => setPopUp(false)}>
                   Home
                 </NavLink>
-                <NavLink to="/details" activestyle="true" onClick={() => setPopUp(false)}>
-                  Details
+                <NavLink to="/country" activestyle="true" onClick={() => setPopUp(false)}>
+                  Country
                 </NavLink>
-                <NavLink to="/contact-us" activestyle="true" onClick={() => setPopUp(false)}>
-                  Contact us
+                <NavLink to="/city" activestyle="true" onClick={() => setPopUp(false)}>
+                  City
                 </NavLink>
               </PopUpNav>
             </>
@@ -30,11 +30,11 @@ function Navbar() {
           <NavLink to="/">
             Home
           </NavLink>
-          <NavLink to="/details" activestyle="true">
-            Details
+          <NavLink to="/country" activestyle="true">
+            Country
           </NavLink>
-          <NavLink to="/contact-us" activestyle="true">
-            Contact us
+          <NavLink to="/city" activestyle="true">
+            City
           </NavLink>
         </NavMenu>
       </Nav>

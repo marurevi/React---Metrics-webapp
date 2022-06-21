@@ -2,8 +2,8 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/index';
 import Home from './components/pages/Home';
-import Details from './components/pages/Details';
-import ContactUs from './components/pages/ContactUs';
+import Country from './components/pages/Country';
+import City from './components/pages/City';
 
 function App() {
   return (
@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/details" element={<Details />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/country" element={<Country />} />
+        <Route path="/city" element={<City />} />
       </Routes>
     </div>
   );
