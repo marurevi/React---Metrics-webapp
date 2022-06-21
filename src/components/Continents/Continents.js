@@ -1,6 +1,8 @@
 import React from 'react';
 import getAllContinents from '../Data/Data';
-import { GridContainer, AmericaNor, AmericaSur, Africa, Asia, Europe, Oceania } from './ContinentsStyle';
+import {
+  GridContainer, AmericaNor, AmericaSur, Africa, Asia, Europe, Oceania,
+} from './ContinentsStyle';
 
 function Continents() {
   console.log(getAllContinents());
