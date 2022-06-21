@@ -1,29 +1,31 @@
-import React from 'react';
-import getAllContinents from '../Data/Data';
-import { GridContainer, AmericaNor, AmericaSur, Africa, Asia, Europe, Oceania } from './ContinentsStyle';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllData } from '../../redux/continent';
+import GridContainer from './ContinentsStyle';
 
 function Continents() {
-  console.log(getAllContinents());
+  const dispatch = useDispatch();
+  const continents = useSelector((state) => state.reduContinent);
+
+  useEffect(() => {
+    dispatch(getAllData);
+  }, []);
+
   return (
     <GridContainer>
-      <AmericaNor>
-        North America
-      </AmericaNor>
-      <AmericaSur>
-        South America
-      </AmericaSur>
-      <Europe>
-        Europe
-      </Europe>
-      <Asia>
-        Asia
-      </Asia>
-      <Africa>
-        Africa
-      </Africa>
-      <Oceania>
-        Oceania
-      </Oceania>
+      {continents.map((continent) => (
+        <ul key={continent.id} style={{ listStyle: 'none' }}>
+          <li>{continent.continent}</li>
+          <li>
+            Cases:
+            {continent.cases}
+          </li>
+          <li>
+            Deaths:
+            {continent.deaths}
+          </li>
+        </ul>
+      ))}
     </GridContainer>
   );
 }
