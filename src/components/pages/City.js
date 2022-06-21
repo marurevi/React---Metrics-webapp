@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Details() {
+function City() {
   return (
     <div>
-      <h1>Details</h1>
+      <h1>City</h1>
     </div>
   );
 }
 
-export default Details;
+export default City;
