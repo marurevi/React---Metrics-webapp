@@ -1,10 +1,11 @@
 import React from 'react';
+import Continents from '../Continents/Continents';
 
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <h2>Continents</h2>
+      <h1>Continents</h1>
+      <Continents />
     </div>
   );
 }
