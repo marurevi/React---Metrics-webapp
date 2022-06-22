@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllData } from '../../redux/continent';
 import { GridContainer, Button } from './ContinentsStyle';
+import Countries from '../Countries/Countries';
 
 function Continents() {
   const dispatch = useDispatch();
   const continents = useSelector((state) => state.reduContinent);
-
+  const [pais, setpais] = useState('');
   useEffect(() => {
     dispatch(getAllData);
   }, []);
@@ -27,7 +28,10 @@ function Continents() {
           </li>
           <li>
             <Link to="/country">
-              <Button id={continent.id} onClick={(e) => console.log('click ', e.target.id)}>Get Info</Button>
+              <Button id={continent.id} onClick={(e) => setpais(e.target.id)}>
+                Get Info
+              </Button>
+              <Countries name={pais} style={{ display: 'none' }} />
             </Link>
           </li>
         </ul>

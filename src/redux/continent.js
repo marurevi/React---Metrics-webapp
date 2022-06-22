@@ -10,11 +10,9 @@ export default function reducer(state = [], action = {}) {
     case GET_DATA:
       return action.payload;
 
-      // case DISPLAY_DATA:
-      //   return state.map((continent) => {
-      //     if (continent.id !== action.payload) return continent;
-      //     return { ...continent, reserved: true };
-      //   }); // CHECK THIS !!!!
+    case DISPLAY_DATA:
+      const continentChosen = state.filter((continent) => (continent.continent === action.payload));
+      return continentChosen.countries;// CHECK THIS !!!!
 
     default:
       return state;
@@ -30,6 +28,6 @@ const getAllData = async (dispatch, getState) => {
   }
 };
 
-const displayContinents = (id) => ({ type: DISPLAY_DATA, payload: id });
+const displayCountries = (continent) => ({ type: DISPLAY_DATA, payload: continent });
 
-export { getAllData, displayContinents };
+export { getAllData, displayCountries };
