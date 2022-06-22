@@ -1,10 +1,11 @@
-import React from 'react';
+import { useParams } from 'react-router-dom';
 import Countries from '../Countries/Countries';
 
 function Country() {
+  const { continent } = useParams();
   return (
     <div>
-      <Countries />
+      <Countries name={continent} />
     </div>
   );
 }

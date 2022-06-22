@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/country" element={<Country />} />
+        <Route path="/country/:continent" element={<Country />} />
         <Route path="/city" element={<City />} />
       </Routes>
     </div>
