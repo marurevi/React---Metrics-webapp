@@ -1,5 +1,6 @@
 /* CONTINENTS */
 const URL = 'https://disease.sh/v3/covid-19/continents';
+const URLcountry = 'https://disease.sh/v3/covid-19/countries/';
 
 const getAllContinents = async () => {
   const continents = [];
@@ -30,4 +31,35 @@ const getAllContinents = async () => {
   return continents;
 };
 
-export default getAllContinents;
+const getApiDataCountry = async (country) => {
+  const URLCountry = URLcountry.concat(`${country}`, '?strict=true');
+  let dataCountry;
+  await fetch(URLCountry)
+    .then((response) => response.json())
+    .then((data) => {
+      dataCountry = {
+        id: data.countryInfo.iso3,
+        // flag: data.countyInfo.flag,
+        cases: data.cases,
+        deaths: data.deaths,
+        recovered: data.recovered,
+        active: data.active,
+        critical: data.critical,
+        casesPerOneMillion: data.casesPerOneMillion,
+        deathsPerOneMillion: data.deathsPerOneMillion,
+        tests: data.tests,
+        testsPerOneMillion: data.testsPerOneMillion,
+        population: data.population,
+        continent: data.continent,
+        oneCasePerPeople: data.oneCasePerPeople,
+        oneDeathPerPeople: data.oneDeathPerPeople,
+        oneTestPerPeople: data.oneTestPerPeople,
+        activePerOneMillion: data.activePerOneMillion,
+        recoveredPerOneMillion: data.recoveredPerOneMillion,
+        criticalPerOneMillion: data.criticalPerOneMillion,
+      };
+    });
+  return dataCountry;
+};
+// console.log(getApiDataCountry('Brazil'));
+export { getAllContinents, getApiDataCountry };
