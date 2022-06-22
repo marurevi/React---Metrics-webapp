@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllData } from '../../redux/continent';
-import GridContainer from './ContinentsStyle';
+import { GridContainer, Button } from './ContinentsStyle';
 
 function Continents() {
   const dispatch = useDispatch();
@@ -15,14 +15,17 @@ function Continents() {
     <GridContainer>
       {continents.map((continent) => (
         <ul key={continent.id} style={{ listStyle: 'none' }}>
-          <li>{continent.continent}</li>
+          <li><h2>{continent.continent}</h2></li>
           <li>
-            Cases:
+            <strong>Cases:</strong>
             {continent.cases}
           </li>
           <li>
-            Deaths:
+            <strong>Deaths:</strong>
             {continent.deaths}
+          </li>
+          <li>
+            <Button id={continent.id} onClick={(e) => console.log('click ', e.target.id)}>Get Info</Button>
           </li>
         </ul>
       ))}

@@ -1,4 +1,4 @@
-import getAllContinents from '../components/Data/Data';
+import { getAllContinents } from '../components/Data/Data';
 
 // Actions types
 const GET_DATA = 'metrics-webapp/continent/GET_DATA';
@@ -10,11 +10,11 @@ export default function reducer(state = [], action = {}) {
     case GET_DATA:
       return action.payload;
 
-    case DISPLAY_DATA:
-      return state.map((continent) => {
-        if (continent.id !== action.payload) return continent;
-        return { ...continent, reserved: true };
-      }); // CHECK THIS !!!!
+      // case DISPLAY_DATA:
+      //   return state.map((continent) => {
+      //     if (continent.id !== action.payload) return continent;
+      //     return { ...continent, reserved: true };
+      //   }); // CHECK THIS !!!!
 
     default:
       return state;
