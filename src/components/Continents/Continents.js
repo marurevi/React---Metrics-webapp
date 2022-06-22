@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllData } from '../../redux/continent';
 import { GridContainer, Button } from './ContinentsStyle';
@@ -25,7 +26,9 @@ function Continents() {
             {continent.deaths}
           </li>
           <li>
-            <Button id={continent.id} onClick={(e) => console.log('click ', e.target.id)}>Get Info</Button>
+            <Link to="/country">
+              <Button id={continent.id} onClick={(e) => console.log('click ', e.target.id)}>Get Info</Button>
+            </Link>
           </li>
         </ul>
       ))}
