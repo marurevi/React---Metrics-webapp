@@ -19,9 +19,6 @@ function Navbar() {
                 <NavLink to="/country" activestyle="true" onClick={() => setPopUp(false)}>
                   Country
                 </NavLink>
-                <NavLink to="/city" activestyle="true" onClick={() => setPopUp(false)}>
-                  City
-                </NavLink>
               </PopUpNav>
             </>
           )
@@ -32,9 +29,6 @@ function Navbar() {
           </NavLink>
           <NavLink to="/country" activestyle="true">
             Country
-          </NavLink>
-          <NavLink to="/city" activestyle="true">
-            City
           </NavLink>
         </NavMenu>
       </Nav>
