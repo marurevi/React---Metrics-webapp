@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { getAllData } from '../redux/continent';
 import { GridContainer, Button } from '../components/Styles/ContinentsStyle';
 
 function Home() {
-  const dispatch = useDispatch();
   const continents = useSelector((state) => state.reduContinent);
+
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllData);
   }, []);
+
   return (
     <div>
       <h1>Covid-19 Metrics</h1>
@@ -26,7 +28,6 @@ function Home() {
               {continent.deaths}
             </li>
             <li>
-              {/* {console.log(continent.countries)} */}
               <Link to={`/country/${continent.id}`}>
                 <Button>Get Info</Button>
               </Link>

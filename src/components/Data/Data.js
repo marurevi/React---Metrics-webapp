@@ -32,34 +32,18 @@ const getAllContinents = async () => {
 };
 
 const getApiDataCountry = async (country) => {
-  const URLCountry = URLcountry.concat(`${country}`, '?strict=true');
-  let dataCountry;
-  await fetch(URLCountry)
+  const object = await fetch(URLcountry)
     .then((response) => response.json())
-    .then((data) => {
-      dataCountry = {
-        id: data.countryInfo.iso3,
-        // flag: data.countyInfo.flag,
-        cases: data.cases,
-        deaths: data.deaths,
-        recovered: data.recovered,
-        active: data.active,
-        critical: data.critical,
-        casesPerOneMillion: data.casesPerOneMillion,
-        deathsPerOneMillion: data.deathsPerOneMillion,
-        tests: data.tests,
-        testsPerOneMillion: data.testsPerOneMillion,
-        population: data.population,
-        continent: data.continent,
-        oneCasePerPeople: data.oneCasePerPeople,
-        oneDeathPerPeople: data.oneDeathPerPeople,
-        oneTestPerPeople: data.oneTestPerPeople,
-        activePerOneMillion: data.activePerOneMillion,
-        recoveredPerOneMillion: data.recoveredPerOneMillion,
-        criticalPerOneMillion: data.criticalPerOneMillion,
-      };
-    });
-  return dataCountry;
+    .then((data) => data.filter((obj) => obj.country === country))
+    .then((info) => info.map((dta) => ({
+      id: country,
+      cases: dta.cases,
+      deaths: dta.deaths,
+      recovered: dta.recovered,
+      active: dta.active,
+      critical: dta.critical,
+      population: dta.population,
+    })));
+  return object[0];
 };
-// console.log(getApiDataCountry('Brazil'));
 export { getAllContinents, getApiDataCountry };
