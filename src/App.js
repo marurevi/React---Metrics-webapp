@@ -1,9 +1,9 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/index';
-import Home from './components/pages/Home';
-import Country from './components/pages/Country';
-import City from './components/pages/City';
+import Home from './pages/Home';
+import Country from './pages/Country';
+import City from './pages/City';
 
 function App() {
   return (
