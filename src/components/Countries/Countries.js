@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllData } from '../../redux/continent';
+import { Button } from './CountriesStyle';
 import CountryInfo from '../CountryInfo/CountryInfo';
 
 function Countries(props) {
@@ -14,14 +15,19 @@ function Countries(props) {
   const { name } = props;
   const filtercontinent = continents.filter((continent) => (continent.id === name))[0];
   const { countries } = filtercontinent;
+  const [country, setCountry] = useState(countries[0]);
 
   return (
     <div>
-      <h1>{ name }</h1>
-      <select name="country">
-        {countries.map((country) => <option value={`${country}`} key={country.split(3)}>{country}</option>)}
-      </select>
-      <CountryInfo />
+      <h1>{name}</h1>
+      <form onSubmit={() => setCountry()}>
+        <select name="country">
+          {countries.map((country) => <option value={`${country}`} key={country.split(3)}>{country}</option>)}
+        </select>
+        <Button type="submit">Show Info</Button>
+      </form>
+
+      <CountryInfo country={country} />
     </div>
   );
 }
