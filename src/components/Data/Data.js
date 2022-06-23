@@ -21,10 +21,8 @@ const getAllContinents = async () => {
           critical: continent.critical,
           tests: continent.tests,
           population: continent.population,
-          continentInfo: {
-            lat: continent.continentInfo.lat,
-            long: continent.continentInfo.long,
-          },
+          InfoLat: continent.continentInfo.lat,
+          InfoLong: continent.continentInfo.long,
           countries: continent.countries,
         })));
     });
@@ -37,6 +35,7 @@ const getApiDataCountry = async (country) => {
     .then((data) => data.filter((obj) => obj.country === country))
     .then((info) => info.map((dta) => ({
       id: country,
+      flag: dta.countryInfo.flag,
       cases: dta.cases,
       deaths: dta.deaths,
       recovered: dta.recovered,

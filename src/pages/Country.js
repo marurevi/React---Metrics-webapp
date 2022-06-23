@@ -29,10 +29,9 @@ function Country() {
         ? (
           <ul style={{ listStyle: 'none' }}>
             <li>
-              <strong>Info Country:</strong>
-              {' '}
-              {countryInfo.id}
+              <h3>{countryInfo.id}</h3>
             </li>
+            <li><img src={countryInfo.flag} alt="flag" /></li>
             <li>
               <strong>Cases:</strong>
               {' '}
