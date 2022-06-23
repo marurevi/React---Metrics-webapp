@@ -26,7 +26,6 @@ function Countries(props) {
         </select>
         <Button type="submit">Show Info</Button>
       </form>
-
       <CountryInfo country={country} />
     </div>
   );

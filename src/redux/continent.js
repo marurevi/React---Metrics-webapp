@@ -11,7 +11,7 @@ export default function reducer(state = [], action = {}) {
       return action.payload;
 
     case DISPLAY_DATA:
-      return state.filter((continent) => (continent.continent === action.payload)).countries;
+      return state.filter((continent) => (continent.id === action.payload))[0].countries;
       // CHECK THIS !!!!
 
     default:
