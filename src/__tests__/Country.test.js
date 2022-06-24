@@ -24,5 +24,4 @@ describe('Test Country page', () => {
     const countries = await getCountryInfo('Moroco');
     expect(countries.length).toBe(1);
   });
-})
-
+});
