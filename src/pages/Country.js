@@ -15,24 +15,23 @@ function Country() {
   }, []);
 
   const filtercontinent = continents.filter((item) => (item.id === continent))[0];
-  const { countries } = filtercontinent;
+  const { countries } = filtercontinent || [];
   const [country, setCountry] = useState();
 
   return (
     <Container>
       <h1>{continent}</h1>
       <List name="country" onChange={(e) => setCountry(e.target.value)}>
-        {countries.map((ctry) => <option value={`${ctry}`} key={ctry}>{ctry}</option>)}
+        {countries && countries.map((ctry) => <option value={`${ctry}`} key={ctry}>{ctry}</option>)}
       </List>
       <Button type="button" onClick={() => dispatch(getCountryInfo(country))}>Show Info</Button>
       {country && (country === countryInfo.id)
         ? (
           <ul style={{ listStyle: 'none' }}>
             <li>
-              <strong>Info Country:</strong>
-              {' '}
-              {countryInfo.id}
+              <h3>{countryInfo.id}</h3>
             </li>
+            <li><img src={countryInfo.flag} alt="flag" /></li>
             <li>
               <strong>Cases:</strong>
               {' '}

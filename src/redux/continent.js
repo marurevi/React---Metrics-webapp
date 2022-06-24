@@ -15,7 +15,7 @@ export default function reducer(state = [], action = {}) {
 }
 
 // Action Creators
-export const getAllData = async (dispatch, getState) => {
+export const getAllData = (getState) => async (dispatch) => {
   const { reduContinent: currentContinentsData } = getState();
   if (currentContinentsData && currentContinentsData.length === 0) {
     const continents = await getAllContinents();
