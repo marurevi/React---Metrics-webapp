@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllData } from '../redux/continent';
 import { getCountryInfo } from '../redux/country';
-import { Container, List, Button } from '../components/Styles/CountriesStyle';
+import {
+  Container, List, Button, InfoCtry,
+} from '../components/Styles/CountriesStyle';
 
 function Country() {
   const dispatch = useDispatch();
@@ -27,42 +29,48 @@ function Country() {
       <Button type="button" onClick={() => dispatch(getCountryInfo(country))}>Show Info</Button>
       {country && (country === countryInfo.id)
         ? (
-          <ul style={{ listStyle: 'none' }}>
+          <InfoCtry>
             <li>
               <h3>{countryInfo.id}</h3>
             </li>
-            <li><img src={countryInfo.flag} alt="flag" /></li>
+            <li><img src={countryInfo.flag} alt="flag" width={150} /></li>
+            <br />
             <li>
               <strong>Cases:</strong>
               {' '}
               {countryInfo.cases}
             </li>
+            <br />
             <li>
               <strong>Active:</strong>
               {' '}
               {countryInfo.active}
             </li>
+            <br />
             <li>
               <strong>Critical:</strong>
               {' '}
               {countryInfo.critical}
             </li>
+            <br />
             <li>
               <strong>Recovered:</strong>
               {' '}
               {countryInfo.recovered}
             </li>
+            <br />
             <li>
               <strong>Deaths:</strong>
               {' '}
               {countryInfo.deaths}
             </li>
+            <br />
             <li>
               <strong>Population:</strong>
               {' '}
               {countryInfo.population}
             </li>
-          </ul>
+          </InfoCtry>
         )
         : 'CHOOSE A COUNTRY'}
     </Container>

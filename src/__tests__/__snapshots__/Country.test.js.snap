@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="sc-bczRLJ bFYexU"
+        class="sc-bczRLJ lmjONK"
       >
         <h1 />
         <select
@@ -14,7 +14,7 @@ Object {
           name="country"
         />
         <button
-          class="sc-dkzDqf gMOxXQ"
+          class="sc-dkzDqf kCzbPk"
           type="button"
         >
           Show Info
@@ -25,7 +25,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="sc-bczRLJ bFYexU"
+      class="sc-bczRLJ lmjONK"
     >
       <h1 />
       <select
@@ -33,7 +33,7 @@ Object {
         name="country"
       />
       <button
-        class="sc-dkzDqf gMOxXQ"
+        class="sc-dkzDqf kCzbPk"
         type="button"
       >
         Show Info

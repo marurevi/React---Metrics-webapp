@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
-import { FaBars } from '@react-icons/all-files/fa/FaBars';
-import { FaTimes } from '@react-icons/all-files/fa/FaTimes';
+import { FaAngleLeft } from '@react-icons/all-files/fa/FaAngleLeft';
+import { FaRegArrowAltCircleRight } from '@react-icons/all-files/fa/FaRegArrowAltCircleRight';
 
 export const Nav = styled.nav`
-  background: #000;
-  height: 80px;
+  background: rgb(236,76,138);
+  height: 40px;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px)/ 2);
+  width: 100vw;
   z-index: 10;
 `;
 
@@ -25,57 +25,25 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const Bars = styled(FaBars)`
-  display: none;
+export const Back = styled(FaAngleLeft)`
   color: #fff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
-
-export const Close = styled(FaTimes)`
-  display: none;
-  color: #fff;
-  @media screen and (max-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-`;
-
-export const PopUpNav = styled.div`
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  padding: 0.5rem calc((100vw - 1000px)/ 2)
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(100%, 45%);
+  font-size: 1.8rem;
+  cursor: pointer;
 `;
 
 export const NavMenu = styled.div`
   display: flex;
+  color: white;
   align-items: center;
   margin-right: -24px;
   width: 100vw;
+  padding-left: 1.5rem;
+  align-items: center;
   white-space: nowrap;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 export const NavBtn = styled.nav`
@@ -91,7 +59,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #256ce1;
+  background: rgb(236,76,138);
   padding: 10px 22px;
   color: #fff;
   outline: none;
@@ -103,6 +71,12 @@ export const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #010606;
+    color: #0000;
   }
+`;
+
+export const Arrow = styled(FaRegArrowAltCircleRight)`
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
 `;
