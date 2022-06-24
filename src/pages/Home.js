@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getAllData } from '../redux/continent';
-import { GridContainer, Button } from '../components/Styles/ContinentsStyle';
+import { GridContainer, Arrow } from '../components/Styles/ContinentsStyle';
 
 function Home() {
   const continents = useSelector((state) => state.reduContinent);
@@ -29,7 +29,7 @@ function Home() {
             </li>
             <li>
               <Link to={`/country/${continent.id}`}>
-                <Button>Get Info</Button>
+                <Arrow />
               </Link>
             </li>
           </ul>

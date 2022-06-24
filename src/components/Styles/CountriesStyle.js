@@ -20,10 +20,17 @@ width: 60%;
 
 export const Button = styled.button`
   padding: 0.5rem;
-  color: white;
-  background: black;
-  border-radius: 15px;
+  color: rgb(236,76,138);
+  border: rgb(236,76,138) 1px solid;
+  background: #000;
+  border-radius: 5px;
   margin: 2rem 0;
   align-self: center;
   width: 60%;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgb(236,76,138);
+
+  }
 `;

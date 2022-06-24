@@ -1,35 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Nav, NavLink, Bars, NavMenu, Close, PopUpNav,
+  Nav, NavLink, Back, NavMenu,
 } from './NavbarStyle';
 
 function Navbar() {
-  const [popUp, setPopUp] = useState(false);
   return (
     <div>
       <Nav>
-        {popUp
-          ? (
-            <>
-              <Close onClick={() => setPopUp(false)} />
-              <PopUpNav>
-                <NavLink to="/" onClick={() => setPopUp(false)}>
-                  Home
-                </NavLink>
-                <NavLink to="/country" activestyle="true" onClick={() => setPopUp(false)}>
-                  Country
-                </NavLink>
-              </PopUpNav>
-            </>
-          )
-          : <Bars onClick={() => setPopUp(true)} />}
         <NavMenu>
           <NavLink to="/">
-            Home
+            <Back />
           </NavLink>
-          <NavLink to="/country" activestyle="true">
-            Country
-          </NavLink>
+          <h3>2022</h3>
         </NavMenu>
       </Nav>
     </div>
