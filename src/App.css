@@ -4,12 +4,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: sans-serif;
   text-align: center;
   font-family: 'Lato', sans-serif;
+  justify-self: center;
 }
 
 body {
   background-color: #000;
-  color: rgb(236,76,138);
+  color: rgb(236, 76, 138);
 }

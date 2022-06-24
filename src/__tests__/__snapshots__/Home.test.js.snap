@@ -6,22 +6,48 @@ Object {
   "baseElement": <body>
     <div>
       <div>
-        <h1>
-          Covid-19 Metrics
-        </h1>
         <div
-          class="sc-bczRLJ fMSvB"
+          class="sc-dkzDqf gcrVmN"
+        >
+          <h1
+            class="sc-hKMtZM fYBxpl"
+          >
+            Covid-19
+            <br />
+            Metrics
+          </h1>
+          <img
+            alt="mapa-mundi"
+            src="mapa-mundi.png"
+            width="400"
+          />
+        </div>
+        <div
+          class="sc-bczRLJ krLPMH"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div>
-      <h1>
-        Covid-19 Metrics
-      </h1>
       <div
-        class="sc-bczRLJ fMSvB"
+        class="sc-dkzDqf gcrVmN"
+      >
+        <h1
+          class="sc-hKMtZM fYBxpl"
+        >
+          Covid-19
+          <br />
+          Metrics
+        </h1>
+        <img
+          alt="mapa-mundi"
+          src="mapa-mundi.png"
+          width="400"
+        />
+      </div>
+      <div
+        class="sc-bczRLJ krLPMH"
       />
     </div>
   </div>,

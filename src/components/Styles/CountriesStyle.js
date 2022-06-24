@@ -4,6 +4,7 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 align-self: center;
+justify-content: center;
 margin: 2rem;
 width: 90%;
 `;
@@ -33,4 +34,17 @@ export const Button = styled.button`
     box-shadow: 2px 2px 10px rgb(236,76,138);
 
   }
+`;
+
+export const InfoCtry = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  width: 75%;
+  list-style: none;
+  background: rgb(236,76,138);
+  color: white;
+  padding: 2rem;
 `;
