@@ -1,56 +1,49 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# React - Metrics Webapp
 
-> Description the project.
+> I used an API that provides numeric data about a Covid-19 around the world. The webapp have two pages:
 
+> - Home page: Display a list of items that have been filtered by some continents.
+
+<p align="center">
+  <img src="./src/components/images/Home.png" alt="Home page" />
+</p>
+
+> - Details page: Display data about a country that you choose in this continent.
+
+<p align="center">
+  <img src="./src/components/images/Details.png" alt="Details page" />
+</p>
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- React - Redux
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo](https://webapp-covid19-metrics.netlify.app/)
 
+<p align="center">
+  <img src="./src/components/images/Metric Webapp - Covid 19.png" alt="Home page" />
+</p>
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+n the project directory, you can clone the repository with the following link: `https://github.com/marurevi/React---Metrics-webapp`
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+Once you have clone the repository run: npm install to install all the dependencies that you need. Then you can run a live version with the command npm start.
 
 ## Authors
 
-👤 **Author1**
+👤 **Mariana Revilla Lérida**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@marurevi](https://github.com/marurevi)
+- Twitter: [@MaruRevilla](https://twitter.com/MaruRevilla)
+- LinkedIn: [Mariana-Revilla-Lérida](https://linkedin.com/in/mariana-revilla-l%C3%A9rida-a12aba143)
 
 ## 🤝 Contributing
 
@@ -64,10 +57,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
+- [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) 
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENCE) licensed.
