@@ -1,9 +1,8 @@
 import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import Home from '../pages/Home';
-import store, { persistor } from '../redux/configureStore';
+import store from '../redux/configureStore';
 import { getAllData } from '../redux/continent';
 import { getAllContinents } from '../components/Data/Data';
 
@@ -11,11 +10,9 @@ describe('Test: Home page', () => {
   test('Should match the snapshot', () => {
     const dom = render(
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Router>
-            <Home />
-          </Router>
-        </PersistGate>
+        <Router>
+          <Home />
+        </Router>
       </Provider>,
     );
     expect(dom).toMatchSnapshot();
