@@ -46,3 +46,15 @@ export const Card = styled.ul`
     filter: contrast(1.2);
   }
 `;
+
+export const SearchBar = styled.input`
+  width: 100vw;
+  padding: 0.5rem;
+  background: rgb(236,76,138, 0.8);
+  color: white;
+  font-style: italic;
+  font-size: large;
+  &::placeholder {
+    color: white;
+  }
+`;

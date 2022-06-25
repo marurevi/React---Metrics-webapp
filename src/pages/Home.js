@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getAllData } from '../redux/continent';
 import {
-  GridContainer, MapBackground, Arrow, Title, Card,
+  GridContainer, MapBackground, Arrow, Title, Card, SearchBar,
 } from '../components/Styles/ContinentsStyle';
 import Imagen from '../components/images/mapa-mundi.png';
 
@@ -33,9 +33,7 @@ function Home() {
         </Title>
         <img src={Imagen} alt="mapa-mundi" width={400} />
       </MapBackground>
-      <div>
-        <input type="text" name="search" id="serchBar" placeholder="Search by country here" onChange={onChangeEvent} />
-      </div>
+      <SearchBar type="text" name="search" id="serchBar" placeholder="Search by country here" onChange={onChangeEvent} />
       <GridContainer>
         {cont && cont.length !== 0
           ? (
