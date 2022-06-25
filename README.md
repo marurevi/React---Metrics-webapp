@@ -2,15 +2,18 @@
 
 # React - Metrics Webapp
 
-> This React capstone project (remember what are they?)is about building a mobile web application to check a list of metrics (numeric values) that you will create making use of React and Redux.
+> I used an API that provides numeric data about a Covid-19 around the world. The webapp have two pages:
 
->You will select an API that provides numeric data about a topic that you like and then build the webapp around it. The webapp will have several pages:
-
-> - one page with a list of items that could be filtered by some parameters; in the example below, it's a list of metrics that can be filtered by the country (imagine a search field to introduce the country name like Italy, Croatia, etc.). This page should be your homepage.
-> - one page for the item details; in the example, the detail page for Czech Republic cities with number of views.
+> - Home page: Display a list of items that have been filtered by some continents.
 
 <p align="center">
-  <img src="https://github.com/microverseinc/curriculum-react-redux/blob/main/capstone/images/metrics_app.png?raw=true" alt="Home page" />
+  <img src="./src/components/images/Home.png" alt="Home page" />
+</p>
+
+> - Details page: Display data about a country that you choose in this continent.
+
+<p align="center">
+  <img src="./src/components/images/Details.png" alt="Details page" />
 </p>
 
 ## Built With
@@ -20,8 +23,11 @@
 
 ## Live Demo (if available)
 
-[Not available yet](https://livedemo.com)
+[Live Demo](https://webapp-covid19-metrics.netlify.app/)
 
+<p align="center">
+  <img src="./src/components/images/Metric Webapp - Covid 19.png" alt="Home page" />
+</p>
 
 ## Getting Started
 
