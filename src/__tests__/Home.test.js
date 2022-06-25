@@ -3,7 +3,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import Home from '../pages/Home';
 import store from '../redux/configureStore';
-import { getAllData } from '../redux/continent';
 import { getAllContinents } from '../components/Data/Data';
 
 describe('Test: Home page', () => {
