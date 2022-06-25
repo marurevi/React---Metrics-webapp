@@ -21,7 +21,7 @@
 - JavaScript
 - React - Redux
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo](https://webapp-covid19-metrics.netlify.app/)
 
