@@ -24,6 +24,7 @@ function Country() {
     <Container>
       <h1>{continent}</h1>
       <List name="country" onChange={(e) => setCountry(e.target.value)}>
+        <option value="" key="country">Country...</option>
         {countries && countries.map((ctry) => <option value={`${ctry}`} key={ctry}>{ctry}</option>)}
       </List>
       <Button type="button" onClick={() => dispatch(getCountryInfo(country))}>Show Info</Button>
