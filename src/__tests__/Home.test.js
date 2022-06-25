@@ -18,11 +18,6 @@ describe('Test: Home page', () => {
     expect(dom).toMatchSnapshot();
   });
 
-  test('Should return initial state', async () => {
-    const continents = await getAllData();
-    expect(continents.length).toBe(1);
-  });
-
   test('Should return an array with continents', async () => {
     const continents = await getAllContinents();
     expect(continents.length).toBe(6);
