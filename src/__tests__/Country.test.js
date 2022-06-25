@@ -1,20 +1,17 @@
 import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import Country from '../pages/Country';
-import store, { persistor } from '../redux/configureStore';
+import store from '../redux/configureStore';
 import { getCountryInfo } from '../redux/country';
 
 describe('Test Country page', () => {
   test('Should match the snapshot', () => {
     const dom = render(
       <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Router>
-            <Country />
-          </Router>
-        </PersistGate>
+        <Router>
+          <Country />
+        </Router>
       </Provider>,
     );
     expect(dom).toMatchSnapshot();
